@@ -7,7 +7,7 @@
   
 }
 button {
-  border: none !important;
+  border: none ;
 }
 html,
 body {
@@ -65,6 +65,7 @@ body {
   font-family: "Archivo";
   font-weight: 500;
   font-size: 0.7vw;
+  cursor: pointer;
 }
 .navbar i {
   display: none;
@@ -124,6 +125,7 @@ body {
   font-family: "Archivo";
   font-weight: 500;
   font-size: 1.1vw;
+  cursor: pointer;
 }
 .right img {
   height: 100%;
