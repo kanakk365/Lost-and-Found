@@ -16,7 +16,20 @@ body{
     flex-direction: column;
     height: 100vh;
 }
-
+.signIn-Btn{
+    background-color: rgb(213, 16, 26);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
 .container{
     background-color: #fff;
     border-radius: 30px;

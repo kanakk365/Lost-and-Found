@@ -9,7 +9,11 @@
 button {
   border: none ;
 }
-html,
+html{
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
 body {
   height: 100%;
   width: 100%;
