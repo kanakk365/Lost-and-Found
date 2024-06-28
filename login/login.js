@@ -47,7 +47,7 @@ signInBtn.addEventListener("click", (event) => {
 
   if (userg) {
     if (signPassword === userData.password) {
-      window.location.href = `./dashboard.html`;
+      window.location.href = `../dashboard/dashboard.html`;
     } else {
       alert.innerText = `WRONG PASSWORD`;
     }
