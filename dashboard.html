@@ -12,10 +12,52 @@
             
             <div class="logo">LOST <span>OR</span> FOUND</div>
             <div class="nav-right">
-                <a href="./login.html"><button class="sign-up report">Report</button></a>
-                <a href="./login.html"><button class="sign-up">Sign Out</button></a>
+                <a href=""><button class="sign-up report">Report</button></a>
+                <a href="./index.html"><button class="sign-up">Sign Out</button></a>
             </div>
 
+        </div>
+        <div class="reportForm">
+            <form class="lostForm" action="/upload" method="post" enctype="multipart/form-data">
+                <h1>Post Item:</h1>
+                <hr>
+                <div class="upperForm">
+                    <div class="formInput">
+                        <h2>Item Name</h2>
+                        <input required type="text" name="itemName" id="itemName" placeholder="Enter item">
+                    </div>
+                    <div class="formInput">
+                        <h2>Location</h2>
+                        <input type="text" required placeholder="Enter Location" name="location" id="location">
+                    </div>
+                    <div class="formInput">
+                        <h2>Date</h2>
+                        <input type="date"  name="date" id="date">
+                    </div>
+                    <div class="formInput">
+                        <h2>Time</h2>
+                        <input type="time"  name="date" id="time" min="00:00" max="24:00" required>
+                    </div>
+                    <div class="formInput">
+                        <h2>Item type</h2>
+                        <select name="itemType" id="itemType" required>
+                            <option disabled selected value="">Choose one</option>
+                            <option value="lostThing">Lost it</option>
+                            <option value="foundThing">Found it</option>
+                        </select>
+                    </div>
+                    <div class="formInput uploadImg">
+                        <h2>Image of the item</h2>
+                        <input  name="image" type="file" accept="image/*" required>
+                    </div>
+                </div>
+                <hr>
+                <div class="lowerForm">
+                    <button type="submit" class="submitForm">Submit</button>
+                    <button class="closeForm"> Close</button>
+                </div>
+
+            </form>
         </div>
         <div class="lost-item">
             <h1 class="head">Lost Items:</h1>
@@ -55,5 +97,6 @@
             </div>
         </div>
     </div>
+    <script src="./dashboard.js"></script>
 </body>
 </html>

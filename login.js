@@ -10,7 +10,7 @@ loginBtn.addEventListener("click", () => {
   container.classList.remove("active");
 });
 
-let alert=document.querySelector(".alert");
+let alert = document.querySelector(".alert");
 let signUpBtn = document.querySelector(".signUp-Btn");
 let signInBtn = document.querySelector(".signIn-Btn");
 
@@ -27,6 +27,11 @@ signUpBtn.addEventListener("click", (event) => {
     password: createPassword,
   };
 
+  if (localStorage.getItem(createEmail)) {
+    alert.innerText = "Email is already registered.";
+    return;
+  }
+
   let json = JSON.stringify(user);
   localStorage.setItem(createEmail, json);
   console.log("added");
@@ -37,18 +42,16 @@ signInBtn.addEventListener("click", (event) => {
   let signEmail = document.querySelector(".signEmail").value;
   let signPassword = document.querySelector(".signPassword").value;
 
-  let user= localStorage.getItem(signEmail);
-  let userData=JSON.parse(user);
-  
-  if(user){
-    if(signPassword===userData.password){
-        window.location.href=`./dashboard.html`
-    }else{
-        alert.innerText= `WRONG PASSWORD`;
+  let userg = localStorage.getItem(signEmail);
+  let userData = JSON.parse(userg);
 
+  if (userg) {
+    if (signPassword === userData.password) {
+      window.location.href = `./dashboard.html`;
+    } else {
+      alert.innerText = `WRONG PASSWORD`;
     }
-  }else{
-    alert.innerText=`WRONG EMAIL`;
+  } else {
+    alert.innerText = `WRONG EMAIL`;
   }
-
 });
